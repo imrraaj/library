@@ -1,0 +1,10 @@
+Socratic dialog with Claude yielded in good results, clear idea of what I am thinking.
+Is it just to sound cool and whether I have good understanding the idea.
+
+Just yesterday, I had an idea of why most governments follow right wing ideology. This was a raw thought and I came up with a reason as to why I have believed that this was the case, I thought my case was fair enough and generally applicable. But there was actually no way to 
+
+I have read the beginning part of the "The Republic" so I know about Socrates' most popular socrates' dialog method for testing/conversation or proving a point.
+
+So I thought I should do this but with the AI, so I went to Claude given the instruction like you are the socrates, I am plato and we are about to engage in the discussion of a topic xyz. My initial point is this. Let us discuss.
+
+And then the conversation happened. One thing I realised for sure that my claim lacked proof. tangible proof. One thing about the ideologies are they are not tangible. You can have one person as per his beliefs, identified as right wing but their action tells you otherwise. I learnt that it is very hard to draw a line between ideologies and even harder to classify a person in either of those ideologies. Also there were some genuine question asked to me that never crossed my mind till now. It is crazy to see how much you can do with AI, just by knowing a method not even fully understanding it and still you can work your way around. Just like me I have never done any philosophy or anything of that sort, but I knew about Socrates' dialog method and I just told the AI to use that and I got my work done. Essentially everything comes down to not storing just plain facts and information rather storing just bare bone information like the index. You don't have to remember why one thing happened who did it and what was the impact, instead just only remembering a thing happened  you do not care about who did it, where it happened, what's the implications. Just remembering the starting point and working/searching the way around could help you more than you imagine.

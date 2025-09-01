@@ -1,0 +1,1 @@
+https://wails.io/ electron like thing but for golang
