@@ -1,0 +1,1 @@
+Most bollywood movies are shit, no storyline, no competent actors and bad VFXs. Some movies get something right in those three no in general I have seen no good movie come out of bollywood in recent years. Movies like RRR that made global collection is a wet dream for any modern bollywood movie.
