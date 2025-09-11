@@ -1,13 +1,13 @@
 export interface ColorScheme {
-  light: string
-  lightgray: string
-  gray: string
-  darkgray: string
-  dark: string
-  secondary: string
-  tertiary: string
-  highlight: string
-  textHighlight: string
+      light: string
+      lightgray: string
+      gray: string
+      darkgray: string
+      dark: string
+      secondary: string
+      tertiary: string
+      highlight: string
+      textHighlight: string
 }
 
 interface Colors {
