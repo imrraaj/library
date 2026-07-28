@@ -1,0 +1,3 @@
+[PDF](https://d1wqtxts1xzle7.cloudfront.net/71752319/Class_209_20-_20Fredrick_201999-libre.pdf?1633622950=&response-content-disposition=inline%3B+filename%3DHedonic_adaptation.pdf&Expires=1785254639&Signature=KOFXSVgrTy79Mg91icpjhG~lLqSoVpTnqdacFqUc4v70H~sDl5bRvzbNvnLQC~rbWQDHXWaTXphDcsPxuq4zipszs6KSHB6RroO4J1QF7bE~4H15FBTqNk2IKVkw8giCvB1lwaR0ROFIEqfCGJgHApEb96mrM6R2SqB2lYaO5pRQ4GmpUSR7Zg1TakT88df-G9dOy4h1ukGDT6qXVgWKpRs8X0KdIvOVPUCcVmebVGkh7q4fr70fqpnh8PAXGxB1mq8pwlh9xzzdPVe60yZEnSHuw-Z~jW6XqulCOFL72HvF02aiM~HUMheyZqdLtQuyhAB89nxn8MrehKLn65FPYw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
+https://escholarship.org/content/qt2w73s294/qt2w73s294.pdf
+https://www.youtube.com/watch?v=SdJSjj2A710

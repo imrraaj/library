@@ -1,13 +1,605 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================
+// CUSTOM QUARTZ THEME: "Library Scholar"
+// A warm, inviting aesthetic for your digital library
+// ============================================
+
+// ===========================================
+// BASE TYPOGRAPHY IMPROVEMENTS
+// ===========================================
 
 html {
-    font-size: 20px;
-    @media all and ($mobile) {
-        & {
-            font-size: 16px;
-        }
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  @media all and ($mobile) {
+    font-size: 16px;
+  }
+}
+
+body {
+  line-height: 1.7;
+}
+
+// ===========================================
+// SMOOTH TRANSITIONS FOR THEME SWITCHING
+// ===========================================
+
+:root {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.center {
+  min-width: unset !important;
+   @media all and ($desktop) {
+      padding: 0 1rem;
     }
 }
+
+
+// ===========================================
+// PAGE TITLE STYLING
+// ===========================================
+
+.page-title {
+  font-weight: 500;
+  position: relative;
+  min-width: fit-content;
+
+  a {
+    background: none !important;
+    padding: 0 !important;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+
+    &:hover {
+      color: var(--tertiary);
+      transform: translateX(2px);
+    }
+  }
+}
+
+// ===========================================
+// ARTICLE TITLE ENHANCEMENTS
+// ===========================================
+
+.article-title {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+
+  // Gradient text effect for headings
+  background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+// ===========================================
+// EXPLORER STYLING
+// ===========================================
+
+.explorer {
+  button.desktop-explorer,
+  button.mobile-explorer {
+    h2 {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    .fold {
+      color: var(--gray);
+    }
+  }
+}
+
+.explorer-content {
+  .folder-container {
+    padding: 0.15rem 0;
+    border-radius: 6px;
+    margin: 0 -0.5rem;
+    padding-left: 0.5rem;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: var(--highlight);
+    }
+  }
+
+  ul li > a {
+    display: block;
+    padding: 0.2rem 0.5rem;
+    margin: 0 -0.5rem;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+    font-weight: 450;
+
+    &:hover {
+      background: var(--highlight);
+      color: var(--dark);
+      opacity: 1;
+    }
+
+    &.active {
+      background: color-mix(in srgb, var(--tertiary) 15%, transparent);
+      font-weight: 500;
+    }
+  }
+
+  .folder-outer > ul {
+    border-left: 2px solid var(--lightgray);
+    margin-left: 8px;
+    padding-left: 12px;
+  }
+}
+
+// ===========================================
+// BACKLINKS
+// ===========================================
+
+.backlinks {
+  & > h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+
+  & > ul.overflow > li {
+    padding: 0.25rem 0;
+
+    & > a {
+      padding: 0.25rem 0.5rem;
+      margin: 0 -0.5rem;
+      display: block;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: var(--highlight);
+      }
+    }
+  }
+}
+
+// ===========================================
+// BREADCRUMBS
+// ===========================================
+
+.breadcrumb-container {
+  margin-top: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lightgray);
+  margin-bottom: 1rem;
+
+  .breadcrumb-element {
+    font-size: 0.85rem;
+
+    a {
+      font-weight: 500;
+      background: none !important;
+      padding: 0 !important;
+      color: var(--gray);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--tertiary);
+      }
+    }
+
+    p {
+      color: var(--gray);
+      opacity: 0.6;
+    }
+  }
+}
+
+// ===========================================
+// CONTENT META (Date, Reading Time)
+// ===========================================
+
+.content-meta {
+  font-size: 0.85rem;
+  color: var(--gray);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--lightgray);
+  margin-bottom: 1.5rem;
+}
+
+// ===========================================
+// TAG LIST
+// ===========================================
+
+article {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+
+    a {
+      background: color-mix(in srgb, var(--secondary) 12%, transparent) !important;
+      color: var(--secondary);
+      padding: 0.25rem 0.75rem !important;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+
+      &:hover {
+        background: color-mix(in srgb, var(--tertiary) 20%, transparent) !important;
+        color: var(--tertiary);
+        border-color: var(--tertiary);
+      }
+    }
+  }
+}
+
+// ===========================================
+// LINKS AND INTERNAL LINKS
+// ===========================================
+
+a {
+  font-weight: 500;
+
+  &.internal {
+    background-color: color-mix(in srgb, var(--secondary) 10%, transparent);
+    padding: 0.05rem 0.3rem;
+    border-radius: 4px;
+    border-bottom: 1px solid color-mix(in srgb, var(--secondary) 30%, transparent);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--tertiary) 15%, transparent);
+      border-bottom-color: var(--tertiary);
+    }
+  }
+}
+
+// ===========================================
+// BLOCKQUOTES
+// ===========================================
+
+blockquote {
+  border-left: 4px solid var(--secondary);
+  background: color-mix(in srgb, var(--lightgray) 40%, transparent);
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+
+  p {
+    margin: 0;
+    color: var(--darkgray);
+  }
+
+  // Remove italic from code in blockquotes
+  code {
+    font-style: normal;
+  }
+}
+
+// ===========================================
+// CODE BLOCKS
+// ===========================================
+
+pre {
+  border-radius: 12px;
+  border: 1px solid var(--lightgray);
+  background: color-mix(in srgb, var(--lightgray) 40%, var(--light)) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+
+  & > code {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+}
+
+// Inline code
+:not(pre) > code {
+  background: color-mix(in srgb, var(--secondary) 10%, transparent);
+  color: var(--secondary);
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+// ===========================================
+// CALLOUTS
+// ===========================================
+
+.callout {
+  border-radius: 12px;
+  border-width: 1px;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+  .callout-title {
+    padding: 0.75rem 0;
+  }
+}
+
+// ===========================================
+// TABLES
+// ===========================================
+
+.table-container > table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--lightgray);
+  margin: 1.5rem 0;
+
+  th {
+    background: color-mix(in srgb, var(--lightgray) 50%, transparent);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  tr:nth-child(even) {
+    background: color-mix(in srgb, var(--lightgray) 20%, transparent);
+  }
+
+  tr:hover {
+    background: var(--highlight);
+  }
+}
+
+// ===========================================
+// HORIZONTAL RULES
+// ===========================================
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--lightgray) 20%,
+    var(--lightgray) 80%,
+    transparent 100%
+  );
+  margin: 3rem 0;
+}
+
+// ===========================================
+// DARK MODE TOGGLE
+// ===========================================
+
+.darkmode {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--lightgray) 50%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--lightgray);
+    transform: rotate(15deg);
+  }
+
+  svg {
+    position: relative;
+    top: auto;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+// ===========================================
+// FOOTER
+// ===========================================
+
+footer {
+  padding-top: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--lightgray);
+  font-size: 0.85rem;
+
+  ul {
+    gap: 1.5rem;
+
+    a {
+      color: var(--gray);
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--tertiary);
+      }
+    }
+  }
+}
+
+// ===========================================
+// SIDEBAR ENHANCEMENTS
+// ===========================================
+
+.sidebar {
+  gap: 2.5rem !important;
+
+  &.left {
+    padding-right: 1rem;
+
+    @media all and ($desktop) {
+      border-right: 1px solid var(--lightgray);
+    }
+  }
+
+  &.right {
+    padding-left: 1rem;
+
+    @media all and ($desktop) {
+      border-left: 1px solid var(--lightgray);
+    }
+  }
+}
+
+// ===========================================
+// SCROLLBAR STYLING
+// ===========================================
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lightgray);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--gray);
+  }
+}
+
+// Firefox scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lightgray) transparent;
+}
+
+// ===========================================
+// READING PROGRESS INDICATOR
+// ===========================================
+
+.navigation-progress {
+  height: 2px;
+  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  border-radius: 0 2px 2px 0;
+}
+
+// ===========================================
+// POPOVER ENHANCEMENTS
+// ===========================================
+
+.popover {
+  border-radius: 12px;
+  border: 1px solid var(--lightgray);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: var(--light);
+
+  &::before {
+    border-color: var(--lightgray);
+  }
+}
+
+// ===========================================
+// SELECTION HIGHLIGHT
+// ===========================================
+
+::selection {
+  background: color-mix(in srgb, var(--tertiary) 40%, transparent);
+  color: var(--dark);
+}
+
+// ===========================================
+// FOCUS STATES FOR ACCESSIBILITY
+// ===========================================
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--tertiary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+// ===========================================
+// IMAGES
+// ===========================================
+
+article img {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Image captions
+p > img + em {
+  font-size: 0.85rem;
+  color: var(--gray);
+  text-align: center;
+  display: block;
+  margin-top: -0.5rem;
+}
+
+// ===========================================
+// FOOTNOTES
+// ===========================================
+
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+
+  &::before {
+    content: "References";
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: var(--gray);
+    margin-bottom: 1rem;
+  }
+}
+
+// ===========================================
+// MOBILE OPTIMIZATIONS
+// ===========================================
+
+@media all and ($mobile) {
+  .sidebar.left:has(.explorer) {
+    background: linear-gradient(
+      180deg,
+      var(--light) 0%,
+      var(--light) 90%,
+      transparent 100%
+    );
+    padding-bottom: 0.5rem;
+  }
+
+  .article-title {
+    font-size: 1.75rem;
+  }
+
+  .breadcrumb-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
