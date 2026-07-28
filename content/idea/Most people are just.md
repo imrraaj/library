@@ -1,3 +1,5 @@
+> Was DPR wrong for fighting for the independence of the  human wants?
+
 came across *Aevy TV* video on YouTube, that hey spent 48 hours on the dark web.
 They were explaining story about Dead Pirates Roberts (Ross Ulbricht) making him sound like a person whose done wrong.
 
